@@ -249,7 +249,7 @@ section {
 /* quote-area */
 .quote-area {
   height: 400px;
-  padding: 30px 20px;
+  padding: 50px 20px;
   background-color: #e5e7eb;
   display: flex;
   justify-content: center;
