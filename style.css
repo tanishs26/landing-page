@@ -7,6 +7,7 @@
 /* HEADER */
 
 header {
+  margin-top: 0;
   display: flex;
   justify-content: space-around;
   background-color: #1f2937;
@@ -16,6 +17,7 @@ header {
 }
 .logo {
   font-size: 40px;
+  font-weight: 700;
 }
 .links {
   display: flex;
@@ -31,12 +33,17 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    text-align: center;
+    padding-top: 0;
   }
   .logo {
-    font-size: 26px;
+    font-size: 29px;
   }
   .links {
     font-size: 16px;
+  }
+  .link{
+    margin-right: 10px;
   }
 }
 
@@ -113,7 +120,8 @@ button:active {
   .text1 {
     display: block;
     width: auto;
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: 10SS00;
     text-align: center;
     word-wrap: normal;
   }
@@ -299,10 +307,9 @@ section {
   font-size: 20px;
   color: #e5e7eb;
 }
-.sign-up button:hover{
+.sign-up button:hover {
   background-color: white;
-  color:#3882f6;
-
+  color: #3882f6;
 }
 @media (max-width: 649px) {
   .contact {
