@@ -32,6 +32,12 @@ header {
     justify-content: center;
     gap: 20px;
   }
+  .logo {
+    font-size: 26px;
+  }
+  .links {
+    font-size: 16px;
+  }
 }
 
 /* DESCRIPTION */
@@ -50,81 +56,116 @@ main {
   flex-wrap: wrap;
 }
 button {
-  width: 100px;
-  background-color: blue;
+  width: 150px;
+  background-color: rgb(56, 130, 246);
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 10px 20px;
+  font-stretch: 100%;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  color: #3882f6;
+  transition: 0.16s;
+}
+button:active {
+  background-color: white;
+  color: #3882f6;
+  transition: 0.16s;
 }
 .text1 {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 900;
 }
 .placeholder {
   display: flex;
   height: 200px;
-  width: 400px;
+  width: 300px;
   background-color: #e5e7eb;
   color: #1f2937;
   justify-content: center;
   align-items: center;
 }
+.placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 1100px) {
   main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
+    padding: 0 20px 0 20px;
   }
   .description {
     display: flex;
     width: 300px;
-  }
-  .description > div:not(.sign) {
-    display: flex;
-    width: 500px;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 10px;
+    margin: 0 20px 0 20px;
+    gap: 5px;
   }
 
   .text1 {
-    width: 300px;
-    font-size: 25px;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    width: auto;
+    font-size: 28px;
+    text-align: center;
     word-wrap: normal;
   }
   .text5 {
-    width: 300px;
+    width: auto;
+    line-height: 27px;
+    /* align-items: flex-start; */
+    word-spacing: 1px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   .placeholder {
-    width: 200px;
-    margin-bottom: 50px;
-    height: 170px;
-  }
-  .sign {
-    display: flex;
     width: 300px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    margin: 0 20px 50px 20px;
+    height: 180px;
+    object-fit: cover;
+  }
+  button {
+    width: 100%;
+    /* align-items: center; */
+    font-stretch: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
+
 /* Cards-section */
+
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .text2 {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 900;
   color: #1f2937;
-  margin-bottom: 100px;
+  text-align: center;
+  margin: 60px 0 0px 0;
 }
 .img-area {
   display: flex;
@@ -133,12 +174,24 @@ section {
 .img-part {
   width: 300px;
 }
-.img-part .img {
+.img {
   width: 250px;
-  height: 150px;
-  border: 4px solid #3882f6;
-  border-radius: 10px;
+  height: 250px;
+  border-radius: 20px;
+  border: 4px solid transparent;
 }
+.img:hover {
+  border: 4px solid #3882f6;
+  border-radius: 20px;
+  background-color: #3882f6;
+}
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 20px;
+}
+
 .img-part p {
   color: #1f2937;
 }
@@ -162,11 +215,9 @@ section {
   }
 }
 @media (max-width: 649px) {
-  .text2 {
-    margin-bottom: 10px;
-  }
   section {
     height: auto;
+    margin-bottom: 50px;
   }
   .img-part-container {
     display: flex;
@@ -178,11 +229,19 @@ section {
     flex-direction: column;
     gap: 10px;
   }
+  .img-part {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* quote-area */
 .quote-area {
   height: 400px;
+  padding: 30px 20px;
   background-color: #e5e7eb;
   display: flex;
   justify-content: center;
@@ -217,9 +276,10 @@ section {
 /* COntact-Details */
 .contact-area {
   display: flex;
-  height: 250px;
+  height: 350px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .contact-area .contact {
   width: 1000px;
@@ -239,6 +299,11 @@ section {
   font-size: 20px;
   color: #e5e7eb;
 }
+.sign-up button:hover{
+  background-color: white;
+  color:#3882f6;
+
+}
 @media (max-width: 649px) {
   .contact {
     flex-direction: column;
@@ -246,18 +311,15 @@ section {
     justify-content: center;
     height: auto;
     width: auto;
-    margin: 0  30px;
-    padding: 10px;
+    margin: 30px 30px;
+    padding: 50px;
+    gap: 20px;
   }
-  .text3 {
-    margin-bottom: 10px;
-  }
+
   .text4 {
     display: flex;
     width: auto;
-    justify-content: center;
-    align-items: center;
-    padding-left: 15px;
+    font-size: 16px;
   }
   .call {
     display: flex;
@@ -267,13 +329,15 @@ section {
   .sign-up {
     display: flex;
     align-items: center;
-    width: auto;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
   }
 }
 
 .sign-up button {
-  width: 120px;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 60px;
   color: white;
   border: 2px solid white;
   background-color: #3882f6;
@@ -283,7 +347,7 @@ section {
 footer {
   height: 100px;
   background-color: #25282c;
-  color: white;
+  color: gold;
   display: flex;
   align-items: center;
   justify-content: center;
